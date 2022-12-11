@@ -3,12 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/joy": "^5.0.0-alpha.57",
+    "@mui/material": "^5.10.17",
+    "@mui/styled-engine-sc": "^5.10.16",
+    "@mui/x-data-grid": "^5.17.14",
+    "@mui/x-data-grid-generator": "^5.17.15",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.2.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.1",
+    "styled-components": "^5.3.6",
+    "usehooks-ts": "^2.9.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +48,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4"
   }
 }
