@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { TextField, InputAdornment } from "@mui/material";
 
 import newsApi from "../apis/news";
+import { COLUMNS } from "./constants";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -18,12 +19,6 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   const debouncedQuery = useDebounce(query, 500);
-
-  const columns = [
-    { field: "objectID", headerName: "Id", width: 200 },
-    { field: "author", headerName: "Author", width: 300 },
-    { field: "title", headerName: "Title", width: 500 },
-  ];
 
   const fetchData = async (showLoding = false) => {
     showLoding && setLoading(true);
@@ -78,7 +73,7 @@ const Dashboard = () => {
             autoHeight
             rows={data}
             pageSize={20}
-            columns={columns}
+            columns={COLUMNS}
             rowCount={dataCount}
             paginationMode="server"
             hideFooterRowCount={false}
@@ -93,6 +88,6 @@ const Dashboard = () => {
       }
     </div>
   );
-}
+};
 
 export default Dashboard;
