@@ -11,7 +11,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+#comment-box {
+  line-height: 1.5;
+  font-size: small;
+  padding: 5rem 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+#comment-box code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#comment-box a {
+  color: rgb(3, 3, 191);
 }

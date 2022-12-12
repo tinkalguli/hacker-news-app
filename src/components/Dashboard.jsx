@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 
+import { toast } from "react-toastify";
 import { useDebounce } from 'usehooks-ts';
 import { DataGrid } from "@mui/x-data-grid";
 import { useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
-import { ToastContainer, toast } from "react-toastify";
 import { TextField, InputAdornment } from "@mui/material";
 
 import newsApi from "../apis/news";
 import { COLUMNS } from "./constants";
+import Loader from "./Loader";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -49,7 +50,6 @@ const Dashboard = () => {
 
   return (
     <div className={`p-20 bg-gray-100 ${loading ? "h-screen" : ""}`}>
-      <ToastContainer />
       <div className="flex flex-col justify-center items-center">
         <TextField
           fullWidth
@@ -68,7 +68,7 @@ const Dashboard = () => {
         />
       </div>
       {
-        loading ? <h1>Loding...</h1> : (
+        loading ? <Loader /> : (
           <DataGrid
             autoHeight
             rows={data}
